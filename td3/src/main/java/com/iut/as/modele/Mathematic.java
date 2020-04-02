@@ -12,18 +12,18 @@ import com.iut.as.interfaces.IMaths;
 public class Mathematic implements IMaths {
 
 	@Override
-	public int addition(int a, int b) {
+	public Integer addition(Integer a, Integer b) {
 		return a + b;
 	}
 
 	@Override
-	public double division(Integer a, Integer b) {
+	public Float division(Integer a, Integer b) {
 		if (a == null || b == null) {
 			System.out.println("Un des opérateurs est nul !");
 			throw new MathematicException("Un des Operateurs est null");
 		}
 		try {
-			return a / b;
+			return (float) (a / b);
 		} catch (ArithmeticException e) {
 			// J'attrappe l'erreur et je préviens l'utilisateur (par exemple) :
 			System.out.println("Division par zéro non autorisée !!!");
@@ -33,18 +33,18 @@ public class Mathematic implements IMaths {
 	}
 
 	@Override
-	public int multiplication(int a, int b) {
+	public Integer multiplication(Integer a, Integer b) {
 		// Utilisation standard :
 		// return a * b;
 
 		// Utilisation de la méthode addition :
-		int ret = 0;
+		Integer ret = 0;
 		boolean signePositif = true;
 		if (a < 0) {
 			a = -a;
 			signePositif = false;
 		}
-		for (int i = 0; i < a; i++) {
+		for (Integer i = 0; i < a; i++) {
 			// ret += b;
 			ret = addition(ret, b);
 		}
@@ -55,7 +55,7 @@ public class Mathematic implements IMaths {
 	}
 
 	@Override
-	public int soustraction(int a, int b) {
+	public Integer soustraction(Integer a, Integer b) {
 		return a - b;
 	}
 }
