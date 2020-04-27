@@ -9,6 +9,14 @@ public class Compte {
 	public double getSolde() {
 		return solde;
 	}
+	
+	/**Constructeur
+	public Compte(double solde, String numeroCompte){
+		this.setSolde(solde);
+		this.setNumeroCompte(numeroCompte);
+	}
+	*/
+	
 
 	public void setSolde(double solde) {
 		this.solde = solde;
