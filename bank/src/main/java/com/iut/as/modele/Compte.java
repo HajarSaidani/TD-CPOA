@@ -1,21 +1,35 @@
 package com.iut.as.modele;
 
+import javax.persistence.*;
+
 public class Compte {
 
-	private double solde;
+    /* 
+     * Le solde du compte.
+     */
+    @Column(name = "solde")
+    protected double solde;
 	
-	private String numeroCompte;
+	@Id
+	@Column(name = "numeroCompte")
+	protected String numeroCompte;
+
+
 	
-	public double getSolde() {
-		return solde;
-	}
-	
-	/**Constructeur
+	/*
+	 * Constructeur avec solde et numeroCompte
+	 */
+	 
 	public Compte(double solde, String numeroCompte){
 		this.setSolde(solde);
 		this.setNumeroCompte(numeroCompte);
 	}
-	*/
+	
+	
+	
+	public double getSolde() {
+		return solde;
+	}
 	
 
 	public void setSolde(double solde) {

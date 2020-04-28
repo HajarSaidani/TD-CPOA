@@ -1,11 +1,13 @@
 package com.iut.as.modele;
 
+import java.util.*;
+
 public class Client {
 
 	private String numeroClient;
 	private String nom;
 	private String adresse;
-	
+	private Collection<Compte> comptes;
 	
 	// Constructeur
 	public Client(String numeroClient, String nom, String adresse) {
@@ -13,6 +15,18 @@ public class Client {
 		this.setNom(nom);
 		this.setAdresse(adresse);
 	}
+	
+	// Constructeur universel
+	public Client() {
+		
+	}
+	
+	public Client(String nom, Collection<Compte> comptes) {
+		this.nom=nom;
+		this.comptes=comptes;
+	}
+	
+	
 	
 	
 	public String getNumClient()
