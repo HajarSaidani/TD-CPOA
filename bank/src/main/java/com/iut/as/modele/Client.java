@@ -18,13 +18,15 @@ public class Client {
 	
 	// Constructeur universel
 	public Client() {
-		
+	
 	}
 	
 	public Client(String nom, Collection<Compte> comptes) {
 		this.nom=nom;
 		this.comptes=comptes;
 	}
+	
+
 	
 	
 	

@@ -2,7 +2,7 @@ package com.iut.as.modele;
 
 import javax.persistence.*;
 
-public class Compte {
+abstract class Compte {
 
     /* 
      * Le solde du compte.
@@ -13,46 +13,88 @@ public class Compte {
 	@Id
 	@Column(name = "numeroCompte")
 	protected String numeroCompte;
+	
+	protected Client client;
 
+
+	/*
+	 * Constructeur universel
+	 */
+	
+	public Compte() {
+		
+	}
+	
+	
+	/*
+	 * Constructeur avec client, solde, numero compte
+	 */
+	 
+	protected Compte(Client client, double solde, String numeroCompte){
+		this.client=client;
+		this.setSolde(solde);
+		this.numeroCompte=numeroCompte;
+	}
+	
+	
+	/*
+	 * Constructeur avec solde et numero compte
+	 */
+	 
+	protected Compte(double solde, String numeroCompte){
+		this.setSolde(solde);
+		this.numeroCompte=numeroCompte;
+	}
 
 	
 	/*
-	 * Constructeur avec solde et numeroCompte
+	 * Constructeur avec numero compte
 	 */
 	 
-	public Compte(double solde, String numeroCompte){
-		this.setSolde(solde);
-		this.setNumeroCompte(numeroCompte);
+	protected Compte(Client client){
+		this.client=client;
 	}
 	
 	
 	
-	public double getSolde() {
+	protected double getSolde() {
 		return solde;
 	}
 	
 
-	public void setSolde(double solde) {
+	protected void setSolde(double solde) {
 		this.solde = solde;
 	}
 
-	public String getNumeroCompte() {
+	protected String getNumeroCompte() {
 		return numeroCompte;
 	}
 
-	public void setNumeroCompte(String numeroCompte) {
+	protected void setNumeroCompte(String numeroCompte) {
 		this.numeroCompte = numeroCompte;
 	}
 
-	public void debiter(double montant)
-	{
+	protected Client getClient() {
+		return client;
+	}
+
+	protected void setClient(Client client) {
+		this.client = client;
+	}	
+	
+	
+	protected void debiter(double montant){
+		
 		this.setSolde(this.getSolde()-montant);
 	}
 	
-	public void crediter(double montant)
+	protected void crediter(double montant)
 	{
 		this.setSolde(this.getSolde()+montant);
 	}
+
+
+	protected abstract double getDecouvertAutorise();
 	
 	
 }

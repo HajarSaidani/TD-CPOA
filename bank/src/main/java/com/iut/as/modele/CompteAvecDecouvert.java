@@ -2,6 +2,13 @@ package com.iut.as.modele;
 
 public class CompteAvecDecouvert extends Compte {
 	
+	/*
+	 * Constructeur
+	 */
+	public CompteAvecDecouvert() {
+		super();
+	}
+	
 	private double decouvertAutorise;
 
 	public double getDecouvertAutorise() {
