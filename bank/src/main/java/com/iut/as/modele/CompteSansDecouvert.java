@@ -10,6 +10,10 @@ public class CompteSansDecouvert extends Compte {
 		super();
 	}
 	
+	public CompteSansDecouvert(double solde, String numeroCompte) {
+		super(solde, numeroCompte);
+	}
+	
 	
 	public CompteSansDecouvert(Client client) {
 		super(client);

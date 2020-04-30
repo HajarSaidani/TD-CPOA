@@ -2,7 +2,7 @@ package com.iut.as.modele;
 
 import javax.persistence.*;
 
-abstract class Compte {
+public abstract class Compte {
 
     /* 
      * Le solde du compte.

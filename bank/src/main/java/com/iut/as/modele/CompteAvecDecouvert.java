@@ -9,6 +9,11 @@ public class CompteAvecDecouvert extends Compte {
 		super();
 	}
 	
+	public CompteAvecDecouvert(double solde, String numeroCompte) {
+		super(solde, numeroCompte);
+	}
+	
+	
 	private double decouvertAutorise;
 
 	public double getDecouvertAutorise() {

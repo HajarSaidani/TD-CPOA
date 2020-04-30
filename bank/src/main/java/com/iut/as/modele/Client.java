@@ -28,9 +28,6 @@ public class Client {
 	
 
 	
-	
-	
-	
 	public String getNumClient()
 	{
 		return numeroClient;
