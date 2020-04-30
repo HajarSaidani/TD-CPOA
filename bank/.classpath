@@ -41,6 +41,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/mac/Downloads/mysql-connector-java-8.0.19/mysql-connector-java-8.0.19.jar"/>
+	<classpathentry kind="lib" path="D:/Cours/Java/Semaine 5/lib/mysql-connector-java-8.0.19.jar"/>
+	<classpathentry kind="lib" path="D:/Cours/Java/Semaine 5/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kevin/git/DUDA_AGOSSOU_SAIDANI_TD3_AS_CPOA-/bank/lib/mysql-connector-java-8.0.17.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.17.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
